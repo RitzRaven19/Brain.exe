@@ -1,0 +1,47 @@
+# Local extracted/temporary artifacts
+.docx_extract/
+.tmp/
+semantic_status.out
+
+# Environment and secrets
+.env
+backend/.env
+.venv/
+venv/
+env/
+
+# Python cache/build
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Logs
+*.log
+uvicorn*.log
+
+# ML/model artifacts
+backend/model_cache/
+model_cache/
+*.faiss
+*.index
+
+# IDE/system
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/

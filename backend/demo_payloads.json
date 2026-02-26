@@ -1,0 +1,27 @@
+{
+  "case_1_exact_duplicate": {
+    "title": "TODAY TIMES",
+    "state_code": "AND",
+    "city": "port blair",
+    "periodicity": "D"
+  },
+  "case_2_brand_strictness": {
+    "title": "dehradun paper",
+    "state_code": "UTT",
+    "city": "dehradun",
+    "periodicity": "D"
+  },
+  "case_3_semantic_similarity": {
+    "title": "Island News",
+    "state_code": "AND",
+    "city": "port blair",
+    "periodicity": "D"
+  },
+  "case_4_clean_low_risk": {
+    "title": "Quantum Robotics Journal",
+    "state_code": "AND",
+    "city": "port blair",
+    "periodicity": "D"
+  }
+}
+

@@ -1,0 +1,21 @@
+{
+  "status": "REVIEW",
+  "decision_basis": "AI_SIMILARITY_ENGINE",
+  "severity": "SEVERE",
+  "verification_probability": 7.53,
+  "concept_density": 0.72,
+  "density_zone": "DENSE",
+  "collision_index": 0.84,
+  "rule_violations": [],
+  "similarity": {
+    "best_match": "TODAY TIMES",
+    "scores": {
+      "semantic": 86.97,
+      "lexical": 95.24,
+      "phonetic": 100.0,
+      "final": 92.47
+    },
+    "is_brand_cluster": false
+  },
+  "explanation": "The submitted title shows SEVERE similarity to 'TODAY TIMES' with a composite score of 92.47%. This is influenced by lexical similarity (95.24%), phonetic similarity (100.0%), and semantic alignment (86.97%). The estimated probability of approval is 7.53%."
+}

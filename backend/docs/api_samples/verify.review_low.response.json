@@ -1,0 +1,21 @@
+{
+  "status": "REVIEW",
+  "decision_basis": "AI_SIMILARITY_ENGINE",
+  "severity": "LOW",
+  "verification_probability": 73.51,
+  "concept_density": 0.12,
+  "density_zone": "SPARSE",
+  "collision_index": 0.21,
+  "rule_violations": [],
+  "similarity": {
+    "best_match": "EMERALD TIMES",
+    "scores": {
+      "semantic": 0.0,
+      "lexical": 37.84,
+      "phonetic": 0.0,
+      "final": 26.49
+    },
+    "is_brand_cluster": false
+  },
+  "explanation": "The submitted title shows LOW similarity to 'EMERALD TIMES' with a composite score of 26.49%. This is influenced by lexical similarity (37.84%), phonetic similarity (0.0%), and semantic alignment (0.0%). The estimated probability of approval is 73.51%."
+}

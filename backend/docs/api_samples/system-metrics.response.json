@@ -1,0 +1,13 @@
+{
+  "total_titles": 8219,
+  "brand_clusters": 66,
+  "brand_threshold": 5,
+  "semantic_enabled": true,
+  "faiss_index_size": 8219,
+  "rules_enabled": 5,
+  "similarity_layers": 3,
+  "model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "average_density": 0.0,
+  "dense_title_count": 0,
+  "saturated_title_count": 0
+}

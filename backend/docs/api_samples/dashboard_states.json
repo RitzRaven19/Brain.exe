@@ -1,0 +1,252 @@
+{
+  "health": {
+    "status": "backend running"
+  },
+  "system_metrics": {
+    "total_titles": 8219,
+    "brand_clusters": 66,
+    "brand_threshold": 5,
+    "semantic_enabled": true,
+    "faiss_index_size": 8219,
+    "rules_enabled": 5,
+    "similarity_layers": 3,
+    "model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "average_density": 0.0,
+    "dense_title_count": 0,
+    "saturated_title_count": 0
+  },
+  "suggest": {
+    "query": "mor",
+    "results": [
+      {
+        "id": 7438,
+        "title": "MORADABAD TIMES"
+      },
+      {
+        "id": 1798,
+        "title": "MORBI TIMES"
+      },
+      {
+        "id": 4720,
+        "title": "MORENA TIMES"
+      }
+    ]
+  },
+  "verify_request_example": {
+    "title": "Today Time",
+    "state_code": "AND",
+    "city": "port blair",
+    "periodicity": "D"
+  },
+  "verify_rejected_states": {
+    "exact_duplicate": {
+      "status": "REJECTED",
+      "decision_basis": "DETERMINISTIC_RULE",
+      "severity": null,
+      "verification_probability": null,
+      "concept_density": null,
+      "density_zone": null,
+      "collision_index": null,
+      "rule_violations": [
+        {
+          "type": "EXACT_DUPLICATE",
+          "message": "Title already exists in same state and city."
+        }
+      ],
+      "similarity": null,
+      "explanation": "The submitted title was rejected due to regulatory rule violation: EXACT_DUPLICATE. Details: Title already exists in same state and city."
+    },
+    "duplicate_pending_application": {
+      "status": "REJECTED",
+      "decision_basis": "DETERMINISTIC_RULE",
+      "severity": null,
+      "verification_probability": null,
+      "concept_density": null,
+      "density_zone": null,
+      "collision_index": null,
+      "rule_violations": [
+        {
+          "type": "DUPLICATE_PENDING_APPLICATION",
+          "message": "A similar pending application already exists for this state."
+        }
+      ],
+      "similarity": null,
+      "explanation": "The submitted title was rejected due to regulatory rule violation: DUPLICATE_PENDING_APPLICATION. Details: A similar pending application already exists for this state."
+    },
+    "disallowed_word": {
+      "status": "REJECTED",
+      "decision_basis": "DETERMINISTIC_RULE",
+      "severity": null,
+      "verification_probability": null,
+      "concept_density": null,
+      "density_zone": null,
+      "collision_index": null,
+      "rule_violations": [
+        {
+          "type": "DISALLOWED_WORD",
+          "message": "Title contains restricted term: 'government of india'."
+        }
+      ],
+      "similarity": null,
+      "explanation": "The submitted title was rejected due to regulatory rule violation: DISALLOWED_WORD. Details: Title contains restricted term: 'government of india'."
+    },
+    "periodicity_injection": {
+      "status": "REJECTED",
+      "decision_basis": "DETERMINISTIC_RULE",
+      "severity": null,
+      "verification_probability": null,
+      "concept_density": null,
+      "density_zone": null,
+      "collision_index": null,
+      "rule_violations": [
+        {
+          "type": "PERIODICITY_INJECTION",
+          "message": "Title differs only by periodicity addition."
+        }
+      ],
+      "similarity": null,
+      "explanation": "The submitted title was rejected due to regulatory rule violation: PERIODICITY_INJECTION. Details: Title differs only by periodicity addition."
+    },
+    "prefix_suffix_resemblance": {
+      "status": "REJECTED",
+      "decision_basis": "DETERMINISTIC_RULE",
+      "severity": null,
+      "verification_probability": null,
+      "concept_density": null,
+      "density_zone": null,
+      "collision_index": null,
+      "rule_violations": [
+        {
+          "type": "PREFIX_SUFFIX_RESEMBLANCE",
+          "message": "Title uses disallowed prefix/suffix pattern that closely resembles an existing title."
+        }
+      ],
+      "similarity": null,
+      "explanation": "The submitted title was rejected due to regulatory rule violation: PREFIX_SUFFIX_RESEMBLANCE. Details: Title uses disallowed prefix/suffix pattern that closely resembles an existing title."
+    },
+    "combination_rule": {
+      "status": "REJECTED",
+      "decision_basis": "DETERMINISTIC_RULE",
+      "severity": null,
+      "verification_probability": null,
+      "concept_density": null,
+      "density_zone": null,
+      "collision_index": null,
+      "rule_violations": [
+        {
+          "type": "COMBINATION_RULE",
+          "message": "Title combines multiple existing titles: ['today times', 'island times']"
+        }
+      ],
+      "similarity": null,
+      "explanation": "The submitted title was rejected due to regulatory rule violation: COMBINATION_RULE. Details: Title combines multiple existing titles: ['today times', 'island times']."
+    }
+  },
+  "verify_review_states": {
+    "severe": {
+      "status": "REVIEW",
+      "decision_basis": "AI_SIMILARITY_ENGINE",
+      "severity": "SEVERE",
+      "verification_probability": 7.53,
+      "concept_density": 0.72,
+      "density_zone": "DENSE",
+      "collision_index": 0.84,
+      "rule_violations": [],
+      "similarity": {
+        "best_match": "TODAY TIMES",
+        "scores": {
+          "semantic": 86.97,
+          "lexical": 95.24,
+          "phonetic": 100.0,
+          "final": 92.47
+        },
+        "is_brand_cluster": false
+      },
+      "explanation": "The submitted title shows SEVERE similarity to 'TODAY TIMES' with a composite score of 92.47%. This is influenced by lexical similarity (95.24%), phonetic similarity (100.0%), and semantic alignment (86.97%). The estimated probability of approval is 7.53%."
+    },
+    "high": {
+      "status": "REVIEW",
+      "decision_basis": "AI_SIMILARITY_ENGINE",
+      "severity": "HIGH",
+      "verification_probability": 18.2,
+      "concept_density": 0.58,
+      "density_zone": "MODERATE",
+      "collision_index": 0.72,
+      "rule_violations": [],
+      "similarity": {
+        "best_match": "MORNING HERALD",
+        "scores": {
+          "semantic": 79.5,
+          "lexical": 88.4,
+          "phonetic": 100.0,
+          "final": 81.8
+        },
+        "is_brand_cluster": false
+      },
+      "explanation": "The submitted title shows HIGH similarity to 'MORNING HERALD' with a composite score of 81.8%. This is influenced by lexical similarity (88.4%), phonetic similarity (100.0%), and semantic alignment (79.5%). The estimated probability of approval is 18.2%."
+    },
+    "moderate": {
+      "status": "REVIEW",
+      "decision_basis": "AI_SIMILARITY_ENGINE",
+      "severity": "MODERATE",
+      "verification_probability": 38.02,
+      "concept_density": 0.44,
+      "density_zone": "MODERATE",
+      "collision_index": 0.55,
+      "rule_violations": [],
+      "similarity": {
+        "best_match": "NEW ISLAND TIMES",
+        "scores": {
+          "semantic": 74.36,
+          "lexical": 81.48,
+          "phonetic": 0.0,
+          "final": 61.98
+        },
+        "is_brand_cluster": false
+      },
+      "explanation": "The submitted title shows MODERATE similarity to 'NEW ISLAND TIMES' with a composite score of 61.98%. This is influenced by lexical similarity (81.48%), phonetic similarity (0.0%), and semantic alignment (74.36%). The estimated probability of approval is 38.02%."
+    },
+    "low": {
+      "status": "REVIEW",
+      "decision_basis": "AI_SIMILARITY_ENGINE",
+      "severity": "LOW",
+      "verification_probability": 73.51,
+      "concept_density": 0.12,
+      "density_zone": "SPARSE",
+      "collision_index": 0.21,
+      "rule_violations": [],
+      "similarity": {
+        "best_match": "EMERALD TIMES",
+        "scores": {
+          "semantic": 0.0,
+          "lexical": 37.84,
+          "phonetic": 0.0,
+          "final": 26.49
+        },
+        "is_brand_cluster": false
+      },
+      "explanation": "The submitted title shows LOW similarity to 'EMERALD TIMES' with a composite score of 26.49%. This is influenced by lexical similarity (37.84%), phonetic similarity (0.0%), and semantic alignment (0.0%). The estimated probability of approval is 73.51%."
+    },
+    "brand_strict_severe": {
+      "status": "REVIEW",
+      "decision_basis": "AI_SIMILARITY_ENGINE",
+      "severity": "SEVERE",
+      "verification_probability": 19.6,
+      "concept_density": 0.66,
+      "density_zone": "DENSE",
+      "collision_index": 0.75,
+      "rule_violations": [],
+      "similarity": {
+        "best_match": "DAINIK JAGRAN",
+        "scores": {
+          "semantic": 76.0,
+          "lexical": 86.0,
+          "phonetic": 90.0,
+          "final": 80.4
+        },
+        "is_brand_cluster": true
+      },
+      "explanation": "The submitted title shows SEVERE similarity to 'DAINIK JAGRAN' with a composite score of 80.4%. This is influenced by lexical similarity (86.0%), phonetic similarity (90.0%), and semantic alignment (76.0%). The estimated probability of approval is 19.6%."
+    }
+  }
+}

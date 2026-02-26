@@ -1,0 +1,17 @@
+{
+  "status": "REJECTED",
+  "decision_basis": "DETERMINISTIC_RULE",
+  "severity": null,
+  "verification_probability": null,
+  "concept_density": null,
+  "density_zone": null,
+  "collision_index": null,
+  "rule_violations": [
+    {
+      "type": "PERIODICITY_INJECTION",
+      "message": "Title differs only by periodicity addition."
+    }
+  ],
+  "similarity": null,
+  "explanation": "The submitted title was rejected due to regulatory rule violation: PERIODICITY_INJECTION. Details: Title differs only by periodicity addition."
+}

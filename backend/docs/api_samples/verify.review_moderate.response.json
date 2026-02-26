@@ -1,0 +1,21 @@
+{
+  "status": "REVIEW",
+  "decision_basis": "AI_SIMILARITY_ENGINE",
+  "severity": "MODERATE",
+  "verification_probability": 38.02,
+  "concept_density": 0.44,
+  "density_zone": "MODERATE",
+  "collision_index": 0.55,
+  "rule_violations": [],
+  "similarity": {
+    "best_match": "NEW ISLAND TIMES",
+    "scores": {
+      "semantic": 74.36,
+      "lexical": 81.48,
+      "phonetic": 0.0,
+      "final": 61.98
+    },
+    "is_brand_cluster": false
+  },
+  "explanation": "The submitted title shows MODERATE similarity to 'NEW ISLAND TIMES' with a composite score of 61.98%. This is influenced by lexical similarity (81.48%), phonetic similarity (0.0%), and semantic alignment (74.36%). The estimated probability of approval is 38.02%."
+}

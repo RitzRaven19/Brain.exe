@@ -1,0 +1,21 @@
+{
+  "status": "REVIEW",
+  "decision_basis": "AI_SIMILARITY_ENGINE",
+  "severity": "HIGH",
+  "verification_probability": 18.2,
+  "concept_density": 0.58,
+  "density_zone": "MODERATE",
+  "collision_index": 0.72,
+  "rule_violations": [],
+  "similarity": {
+    "best_match": "MORNING HERALD",
+    "scores": {
+      "semantic": 79.5,
+      "lexical": 88.4,
+      "phonetic": 100.0,
+      "final": 81.8
+    },
+    "is_brand_cluster": false
+  },
+  "explanation": "The submitted title shows HIGH similarity to 'MORNING HERALD' with a composite score of 81.8%. This is influenced by lexical similarity (88.4%), phonetic similarity (100.0%), and semantic alignment (79.5%). The estimated probability of approval is 18.2%."
+}

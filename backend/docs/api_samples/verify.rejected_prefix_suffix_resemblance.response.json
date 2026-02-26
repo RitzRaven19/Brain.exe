@@ -1,0 +1,17 @@
+{
+  "status": "REJECTED",
+  "decision_basis": "DETERMINISTIC_RULE",
+  "severity": null,
+  "verification_probability": null,
+  "concept_density": null,
+  "density_zone": null,
+  "collision_index": null,
+  "rule_violations": [
+    {
+      "type": "PREFIX_SUFFIX_RESEMBLANCE",
+      "message": "Title uses disallowed prefix/suffix pattern that closely resembles an existing title."
+    }
+  ],
+  "similarity": null,
+  "explanation": "The submitted title was rejected due to regulatory rule violation: PREFIX_SUFFIX_RESEMBLANCE. Details: Title uses disallowed prefix/suffix pattern that closely resembles an existing title."
+}

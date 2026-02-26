@@ -1,0 +1,10 @@
+ALTER TABLE titles
+ADD COLUMN IF NOT EXISTS concept_density FLOAT,
+ADD COLUMN IF NOT EXISTS neighbor_count INT,
+ADD COLUMN IF NOT EXISTS density_zone VARCHAR(20);
+
+ALTER TABLE applications
+ADD COLUMN IF NOT EXISTS concept_density FLOAT,
+ADD COLUMN IF NOT EXISTS collision_index FLOAT,
+ADD COLUMN IF NOT EXISTS density_zone VARCHAR(20);
+

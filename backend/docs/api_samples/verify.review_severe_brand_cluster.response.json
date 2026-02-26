@@ -1,0 +1,21 @@
+{
+  "status": "REVIEW",
+  "decision_basis": "AI_SIMILARITY_ENGINE",
+  "severity": "SEVERE",
+  "verification_probability": 19.6,
+  "concept_density": 0.66,
+  "density_zone": "DENSE",
+  "collision_index": 0.75,
+  "rule_violations": [],
+  "similarity": {
+    "best_match": "DAINIK JAGRAN",
+    "scores": {
+      "semantic": 76.0,
+      "lexical": 86.0,
+      "phonetic": 90.0,
+      "final": 80.4
+    },
+    "is_brand_cluster": true
+  },
+  "explanation": "The submitted title shows SEVERE similarity to 'DAINIK JAGRAN' with a composite score of 80.4%. This is influenced by lexical similarity (86.0%), phonetic similarity (90.0%), and semantic alignment (76.0%). The estimated probability of approval is 19.6%."
+}
