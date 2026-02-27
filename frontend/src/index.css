@@ -1,0 +1,354 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Charcoal palette */
+    --background: 0 0% 8%;
+    --foreground: 48 10% 90%;
+
+    --card: 0 0% 11%;
+    --card-foreground: 48 10% 90%;
+
+    --popover: 0 0% 11%;
+    --popover-foreground: 48 10% 90%;
+
+    /* Mustard yellow */
+    --primary: 43 90% 50%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 48 10% 80%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 43 80% 45%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 48 10% 95%;
+
+    --border: 0 0% 22%;
+    --input: 0 0% 18%;
+    --ring: 43 90% 50%;
+
+    --radius: 0.875rem;
+
+    /* Custom tokens */
+    --charcoal-100: 0 0% 8%;
+    --charcoal-200: 0 0% 11%;
+    --charcoal-300: 0 0% 15%;
+    --charcoal-400: 0 0% 20%;
+    --mustard: 43 90% 50%;
+    --mustard-light: 45 95% 60%;
+    --mustard-dark: 40 85% 38%;
+    --glass-bg: 0 0% 12%;
+    --glass-border: 0 0% 25%;
+    --surface: 0 0% 10%;
+
+    /* Sidebar compatibility */
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 48 10% 90%;
+    --sidebar-primary: 43 90% 50%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 48 10% 80%;
+    --sidebar-border: 0 0% 22%;
+    --sidebar-ring: 43 90% 50%;
+
+    /* Legacy compat */
+    --navy: 0 0% 18%;
+    --navy-light: 43 90% 50%;
+    --olive-glow: 43 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    background-color: hsl(0 0% 8%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  ::selection {
+    background: hsl(43 90% 50% / 0.3);
+    color: hsl(48 10% 95%);
+  }
+}
+
+@layer utilities {
+  /* ─── Glass cards ─── */
+  .glass-card {
+    background: hsl(0 0% 12% / 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(0 0% 25% / 0.6);
+    border-radius: var(--radius);
+  }
+
+  .glass-card-strong {
+    background: hsl(0 0% 14% / 0.9);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid hsl(43 90% 50% / 0.2);
+    border-radius: var(--radius);
+  }
+
+  .charcoal-card {
+    background: hsl(0 0% 13%);
+    border: 1px solid hsl(0 0% 22%);
+    border-radius: var(--radius);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .charcoal-card:hover {
+    border-color: hsl(43 90% 50% / 0.4);
+    box-shadow: 0 0 20px hsl(43 90% 50% / 0.08);
+  }
+
+  /* ─── Gradients ─── */
+  .gradient-mustard-glow {
+    background: radial-gradient(ellipse at 50% 50%, hsl(43 90% 50% / 0.12) 0%, transparent 70%);
+  }
+
+  .gradient-mustard-glow-subtle {
+    background: radial-gradient(ellipse at 30% 20%, hsl(43 90% 50% / 0.07) 0%, transparent 60%);
+  }
+
+  .gradient-section-fade {
+    background: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 10%) 50%, hsl(0 0% 8%) 100%);
+  }
+
+  .gradient-hero-bg {
+    background:
+      radial-gradient(ellipse at 60% 40%, hsl(43 90% 50% / 0.10) 0%, transparent 55%),
+      radial-gradient(ellipse at 15% 70%, hsl(43 80% 40% / 0.06) 0%, transparent 45%),
+      hsl(0 0% 8%);
+  }
+
+  /* ─── Text gradients ─── */
+  .text-gradient-mustard {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(43 90% 55%), hsl(45 95% 68%));
+  }
+
+  .text-gradient-olive {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(43 90% 55%), hsl(45 95% 68%));
+  }
+
+  /* ─── Hero title glow ─── */
+  .hero-title-glow {
+    text-shadow:
+      0 0 80px hsl(43 90% 50% / 0.4),
+      0 0 160px hsl(43 90% 50% / 0.15);
+  }
+
+  .mustard-glow {
+    box-shadow:
+      0 0 30px hsl(43 90% 50% / 0.2),
+      0 0 80px hsl(43 90% 50% / 0.08);
+  }
+
+  /* ─── Buttons (hero variants) ─── */
+  .btn-mustard {
+    background: linear-gradient(135deg, hsl(43 90% 50%), hsl(45 95% 58%));
+    color: hsl(0 0% 8%);
+    font-weight: 600;
+    border-radius: calc(var(--radius) - 2px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 24px hsl(43 90% 50% / 0.25);
+  }
+
+  .btn-mustard:hover {
+    background: linear-gradient(135deg, hsl(45 95% 58%), hsl(43 90% 50%));
+    box-shadow: 0 6px 32px hsl(43 90% 50% / 0.40);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-mustard {
+    background: transparent;
+    color: hsl(43 90% 50%);
+    border: 1px solid hsl(43 90% 50% / 0.4);
+    font-weight: 500;
+    border-radius: calc(var(--radius) - 2px);
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-mustard:hover {
+    background: hsl(43 90% 50% / 0.1);
+    border-color: hsl(43 90% 50% / 0.7);
+    box-shadow: 0 0 20px hsl(43 90% 50% / 0.15);
+  }
+
+  /* ─── Animated separator ─── */
+  .animate-separator {
+    background: linear-gradient(90deg,
+      transparent,
+      hsl(43 90% 50% / 0.5),
+      hsl(45 95% 65% / 0.3),
+      hsl(43 90% 50% / 0.5),
+      transparent
+    );
+    animation: separator-slide 4s ease-in-out infinite;
+    background-size: 200% 100%;
+  }
+
+  @keyframes separator-slide {
+    0%, 100% { background-position: -200% 0; }
+    50% { background-position: 200% 0; }
+  }
+
+  /* ─── Score bars ─── */
+  .metric-card {
+    @apply charcoal-card p-5;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .metric-card:hover {
+    border-color: hsl(43 90% 50% / 0.35);
+    box-shadow: 0 0 20px hsl(43 90% 50% / 0.08);
+  }
+
+  .score-bar {
+    @apply h-1.5 rounded-full overflow-hidden;
+    background: hsl(0 0% 22%);
+  }
+
+  .score-bar-fill {
+    @apply h-full rounded-full;
+    background: linear-gradient(90deg, hsl(40 85% 40%), hsl(45 95% 60%));
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* ─── Fade in up ─── */
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── Float animation (background orbs) ─── */
+  .animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+  }
+
+  .animate-float-medium {
+    animation: float-medium 6s ease-in-out infinite;
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-24px) scale(1.04); }
+  }
+
+  @keyframes float-medium {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-16px) rotate(8deg); }
+  }
+
+  /* ─── Shimmer ─── */
+  .animate-shimmer {
+    background: linear-gradient(90deg,
+      transparent 0%,
+      hsl(43 90% 50% / 0.15) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  /* ─── Pulse glow ─── */
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  /* ─── Screen slide transition ─── */
+  .screen-enter {
+    animation: screen-enter 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes screen-enter {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .screen-exit {
+    animation: screen-exit 0.3s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+  }
+
+  @keyframes screen-exit {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(-24px); }
+  }
+
+  /* ─── Spin for loaders ─── */
+  .animate-spin-slow {
+    animation: spin 1.5s linear infinite;
+  }
+
+  /* ─── Stat counter flicker ─── */
+  .animate-count-up {
+    animation: count-up 0.8s ease-out forwards;
+  }
+
+  @keyframes count-up {
+    from { opacity: 0; transform: scale(0.8); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  /* ─── Mustard border line on top of cards ─── */
+  .card-top-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(43 90% 50% / 0.5), transparent);
+  }
+
+  /* ─── Nav line animation ─── */
+  .nav-underline {
+    position: relative;
+  }
+
+  .nav-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: hsl(43 90% 50%);
+    transition: width 0.3s ease;
+  }
+
+  .nav-underline:hover::after {
+    width: 100%;
+  }
+}
