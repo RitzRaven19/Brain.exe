@@ -10,6 +10,34 @@ C:\Users\likug\Desktop\XIMHACK
 
 ---
 
+## Single Command (Recommended)
+
+From project root:
+
+```powershell
+.\run_all.ps1
+```
+
+Or:
+
+```powershell
+.\run_all.cmd
+```
+
+What it does:
+
+- checks PostgreSQL availability on `127.0.0.1:5432` (tries to start PostgreSQL service if needed)
+- starts backend in a new PowerShell window (`uvicorn ... --reload`)
+- starts frontend in a new PowerShell window (`npm run dev`)
+
+Stop both services launched by script:
+
+```powershell
+.\run_all.ps1 -Stop
+```
+
+---
+
 ## 1) Start Database (PostgreSQL)
 
 ### 1.1 Ensure PostgreSQL service is running
